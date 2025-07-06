@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulaziz Alharbi - Resume</title>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="CV_icon.png" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Toggle Theme Button Style -->
+  <style>
+    .theme-toggle {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      font-size: 2.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      color: var(--primary-color);
+    }
+  
+    @media print {
+      .theme-toggle {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+
+<body>
+  <!-- Toggle Mode Button -->
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeIcon">🌙</button>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <i data-feather="user"></i>
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_firstName">Abdulaziz</span>
+            <span class="profile_name_lastName">Alharbi</span>
+          </h1>
+          <p class="profile_title">Student Developer – Full Stack Focus</p>
+          <p class="description profile_description">
+            I have a passion for technology and coding, and I am pursuing a career in full stack development. I am committed to learning and mastering both front-end and back-end technologies to build comprehensive and efficient web applications. With a strong foundation in programming and a continuous drive for knowledge, I aim to contribute to innovative projects and grow within the tech industry 
+          </p>
+          <a class="downloadBtn" href="cv.pdf" download="Abdulaziz_Alharbi_CV.pdf">Download Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise & Education -->
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Skills</h3>
+        <ul class="skills_list description">
+          <li>Python</li>
+          <li>Java</li>
+          <li>SQL</li>
+          <li>HTML, CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="edu">
+        <h3 class="title">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle">2019 - 2025</p>
+          <h4 class="item_title">BSc in Computer Science</h4>
+          <p class="item_subtitle">Qassim University</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience & Interests -->
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">Experience</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">2019 – Present</p>
+          <h4 class="item_title">Student Developer</h4>
+          <p class="item_subtitle">Full Stack Projects (Personal & Academic)</p>
+          <p class="description">
+            Worked on multiple web development projects as part of university coursework and self-study.<br>
+            Gained hands-on experience with frontend and backend technologies by building functional applications.<br>
+          </p>
+        </div>
+
+        <div class="exp_item">
+          <p class="item_preTitle">2024 - 2025</p>
+          <h4 class="item_title">Graduation Project – Qassim University</h4>
+          <p class="item_subtitle">AI-Based Body Composition Analysis System</p>
+          <p class="description">
+            Developed an intelligent system that analyzes body fat and muscle ratios using AI techniques.
+            The project also generates personalized fitness and nutrition plans based on user data.
+            Focused on enhancing health outcomes with data-driven recommendations and machine learning algorithms.
+          </p>
+        </div>
+      </div>
+
+    
+    </div>
+
+    <!-- Separator -->
+    <hr />
+
+    <!-- Contact & Social -->
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">Saudi Arabia</p>
+          <p class="description">0555010056</p>
+          <p class="description">
+            <a href="mailto:abdulazizf.cs1@gmail.com" class="email-link">
+              abdulazizf.cs1@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="https://github.com/ii3z-1" target="_blank" class="social_item">
+            <i data-feather="github"></i>
+            <span>/abdulaziz</span>
+          </a>
+          <a href="https://x.com/i3z__x" target="_blank" class="social_item">
+            <i class="fab fa-x-twitter"></i>
+            <span>@abdulaziz</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="languages">
+        <h3 class="title">Languages</h3>
+        <ul class="description">
+          <li>Arabic (Native)</li>
+          <li>English (Professional)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    feather.replace();
+  
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('themeIcon');
+      const isDark = html.getAttribute('data-theme') === 'dark';
+  
+      if (isDark) {
+        html.setAttribute('data-theme', 'light');
+        icon.textContent = '🌙'; // show moon to switch to dark
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        icon.textContent = '☀️'; // show sun to switch to light
+      }
+    }
+  
+    // Initial icon on page load
+    window.onload = function () {
+      const icon = document.getElementById('themeIcon');
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      icon.textContent = isDark ? '☀️' : '🌙';
+    }
+  </script>
+  
+</body>
+
+</html>
